@@ -50,7 +50,7 @@ def bulk_create_animal(api_key: str, base_url: str, animal_data_list: Dict[str, 
 
     try:
         # Send a POST request to create the animals
-        response = requests.post(endpoint, headers=headers, json={"createAnimalRequestDtos": animal_data_list})
+        response = requests.post(endpoint, headers=headers, json=animal_data_list)
 
         if response.status_code == 201:
             return "Animals created successfully"
